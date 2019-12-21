@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgrrrr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <androidx.appcompat.widget.Toolbar
+        app:title=" "
+        android:id="@+id/toolbarlogin"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"/>
+    <ScrollView
+        android:layout_below="@id/toolbarlogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewdangki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Đăng Nhập hoặc Đăng Ký"
+                android:textColor="#FCFCFC"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawableLeft="@drawable/smartphone"
+                android:id="@+id/btnloginsdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="#CC1C921C"
+                android:text="Số điện thoại"
+                android:textColor="#FCFCFC"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnloginfb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewdangki" />
+            <Button
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawableLeft="@drawable/facebook"
+                android:id="@+id/btnloginfb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:background="#CB3059CE"
+                android:text="Facebook"
+                android:textColor="#FCFCFC"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnlogingoogle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnloginsdt" />
+            <Button
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:drawableLeft="@drawable/googleplus_32"
+                android:id="@+id/btnlogingoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:background="#CBEE3A3A"
+                android:text="Google"
+                android:textColor="#FCFCFC"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnloginfb" />
+            <EditText
+                android:text="test"
+                android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                android:background="@drawable/customedt"
+                android:id="@+id/editTextTK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint="Tài khoản của bạn"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnlogingoogle" />
+            <EditText
+                android:text="123"
+                app:passwordToggleTint="@drawable/customedt"
+                app:passwordToggleEnabled="true"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:background="@drawable/customedt"
+                android:id="@+id/editTextPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint="Nhập mật khẩu của bạn"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTK" />
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/custombtn2"
+                android:text="Đăng nhập"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPW" />
+
+            <TextView
+                android:id="@+id/textViewquenmk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/quen_mat_khau_gachchan"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

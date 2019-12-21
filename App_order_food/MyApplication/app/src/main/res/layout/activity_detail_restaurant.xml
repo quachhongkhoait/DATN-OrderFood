@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRestaurantActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarquan"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        app:title="     " />
+    <ScrollView
+        android:layout_below="@id/toolbarquan"
+        android:background="#E4E2E2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:scaleType="fitXY"
+                android:background="#F7C858"
+                android:id="@+id/imgquanan"
+                android:src="@drawable/ic_add_circle_black_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <LinearLayout
+                android:weightSum="3"
+                android:background="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#020505"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Quán đâì tiên"
+                    android:id="@+id/tvtenquanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#020505"
+                    android:textStyle="normal"
+                    android:textSize="15dp"
+                    android:text="57 Nguyễn tạo đà nẵng"
+                    android:id="@+id/tvdiachiquanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#020505"
+                    android:textStyle="normal"
+                    android:textSize="15dp"
+                    android:text="6:00 -> 22:00"
+                    android:id="@+id/tvthoigianquanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewmontrongquanan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

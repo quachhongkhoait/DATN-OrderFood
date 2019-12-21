@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Orderfood</string>//Orderfood
+    <string name="title_home">Trang chủ</string>
+    <string name="title_information">Thông tin</string>
+    <string name="title_notification">Thông báo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello strt</string>
+
+    <string name="quen_mat_khau_gachchan"><u>Quên mật khẩu?</u></string>
+
+    <string name="lich_su"><a href="">Lịch sử</a></string>
+</resources>

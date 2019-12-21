@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Đăng ký tài khoản"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"/>
+<!--    <TextView-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:id="@+id/textviewtitle"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Đăng ký tài khoản"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imgDK"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_circle_blac1" />
+
+            <EditText
+                android:id="@+id/editTextTenDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgDK"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:hint="Nhập vào họ tên"
+                android:text="qeq" />
+
+            <EditText
+                android:id="@+id/editTextTKDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextTenDK"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:hint="Nhập vào tài khoản"
+                android:text="qưeqwe" />
+
+            <EditText
+                android:id="@+id/editTextPWDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextTKDK"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:hint="Nhập vào mật khẩu"
+                android:text="112" />
+
+            <EditText
+                android:id="@+id/editTextEMDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextPWDK"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:hint="Nhập vào Email"
+                android:text="qwe1@qeqcc" />
+
+            <EditText
+                android:id="@+id/editTextSDTDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextEMDK"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:hint="Nhập vào số điện thoại"
+                android:text="21312312" />
+
+            <Button
+                android:id="@+id/btnxacnhanDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextSDTDK"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="40dp"
+                android:text="Xác nhận" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

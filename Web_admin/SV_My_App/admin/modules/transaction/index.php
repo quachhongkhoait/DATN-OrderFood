@@ -1,0 +1,1 @@
+<?php header("location: http://localhost:8888/SV_My_App/admin/"); ?>

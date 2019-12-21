@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:background="#FFFFFF"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentOrderActivity">
+    #DAD9D9
+    <androidx.appcompat.widget.Toolbar
+        app:title="Xem lại đơn hàng"
+        android:id="@+id/toolbarpayment"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"/>
+    <LinearLayout
+        android:weightSum="7"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_weight="6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                // địa chỉ
+                <LinearLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="Giao hàng tới địa chỉ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:weightSum="8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_room_black_24dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_weight="6"
+                            android:textColor="#000000"
+                            android:text="57 Nguyễn Tạo, Ngũ Hàng Sơn, Đà Nẵng"
+                            android:id="@+id/tvdiachipayment"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                        <ImageView
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_mode_edit_black_24dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+                // ghi chu
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="Ghi chú thêm( tùy chọn)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/edtghichu"
+                        android:hint="Tên tòa nhà, lầu, tầng, văn phòng,..."
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"/>
+                </LinearLayout>
+                // phương thức thanh toán
+                <LinearLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="Phương thức thanh toán"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Trả bằng tiền mặt khi nhận hàng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                //danh sach mon an
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Chi tiết đơn hàng"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+                    <ListView
+                        android:id="@+id/lvpayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="600dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        //tổng
+        <LinearLayout
+            android:background="@drawable/vien_gh"
+            android:weightSum="3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:text="Tổng tiền:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:text=""
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:id="@+id/tvtongtienpayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <TextView
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:text="Đặt đơn"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bogoc"
+                android:id="@+id/tvdatdonpayment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
